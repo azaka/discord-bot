@@ -1,1 +1,1 @@
-worker: ruby ping.rb
+worker: ruby eval.rb
