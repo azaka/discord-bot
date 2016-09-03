@@ -14,7 +14,7 @@ bot = Discordrb::Commands::CommandBot.new token: ENV['TOKEN'], application_id: 2
 bot.command(:eval, help_available: false) do |event, *code|
   #event.respond 'command'
   #puts "received eval command from userid: #{event.user.id}"
-  break unless event.user.id == ENV['UID'] # Replace number with your ID
+  break unless event.user.id == ENV['UID'].to_i # Replace number with your ID
   
   #puts 'execute'
 
