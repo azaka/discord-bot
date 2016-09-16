@@ -1,1 +1,1 @@
-worker: bundler exec ruby eval.rb
+worker: ruby eval.rb
