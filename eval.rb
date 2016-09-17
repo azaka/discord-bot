@@ -25,4 +25,19 @@ bot.command(:eval, help_available: false) do |event, *code|
   end
 end
 
+# ping owner when ready
+@priv_chan=nil
+@owner_id=nil
+@owner_user=nil
+bot.ready do |event|
+	@owner_id = ENV['UID'].to_i
+	@priv_chan = bot.private_channel @owner_id
+	
+	@owner_user = @priv_chan.recipient
+	
+	@owner_user.mention
+	
+	# ready timestamp
+end
+
 bot.run
