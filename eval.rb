@@ -35,7 +35,7 @@ bot.ready do |event|
 	
 	@owner_user = @priv_chan.recipient
 	
-	@owner_user.mention
+	event.respond @owner_user.mention
 	
 	# ready timestamp
 end
