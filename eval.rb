@@ -68,7 +68,7 @@ def recent_updated_titles(name)
 	issues.items.reject!{|issue_item| issue_item.updated_at < @last_updated} unless @last_updated.nil?
 	@last_updated = issues.items.first.updated_at
 	
-	issues.items.map{|issue_item| issue_item.title}
+	issues.items.map{|issue_item| issue_item.name}
 	
 end
 
