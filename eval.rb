@@ -25,6 +25,13 @@ bot.command(:eval, help_available: false) do |event, *code|
   end
 end
 
+# makes the bot ping the sender
+bot.command(:mention, help_available: false) do |event|
+	return if event.from_bot?
+	
+	event.respond event.user.mention
+end
+
 # ping owner when ready
 @priv_chan = nil
 @owner_id = nil
