@@ -37,6 +37,8 @@ end
 @owner_id = nil
 @owner_user = nil
 bot.ready do |event|
+	puts 'bot ready'
+	
 	@owner_id = ENV['UID'].to_i
 	@priv_chan = bot.private_channel @owner_id
 	
