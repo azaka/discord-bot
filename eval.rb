@@ -62,7 +62,7 @@ end
 # as array of title strings
 
 def recent_updated_titles(name)
-	issues = issue=Octokit.search_repositories name, {:sort => :updated}
+	issues = Octokit.search_repositories name, {:sort => :updated}
 	
 	# filter for newer issues
 	issues.items.reject!{|issue_item| issue_item.updated_at < @last_updated} unless @last_updated.nil?
