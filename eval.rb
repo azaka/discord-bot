@@ -43,8 +43,8 @@ bot.ready do |event|
 	@priv_chan = bot.private_channel @owner_id
 	
 	@owner_user = @priv_chan.recipient
-	
-	event.respond @owner_user.mention
+# merge with local changes	
+#	event.respond @owner_user.mention
 	
 	# ready timestamp
 end
