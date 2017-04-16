@@ -20,8 +20,8 @@ bot.command(:eval, help_available: false) do |event, *code|
 
   begin
     eval code.join(' ')
-  rescue
-    "An error occured 😞"
+  rescue => e
+    "#{e.message} An error occured 😞"
   end
 end
 
